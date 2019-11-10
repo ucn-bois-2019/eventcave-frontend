@@ -1,0 +1,35 @@
+{
+  "name": "eventcave-frontend",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npx rollup -c",
+    "build:dev": "npx rollup -cw --environment DEV_MODE & npx http-server ./ -c-1",
+    "serve": "npx http-server ./"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.26.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-scss": "^1.0.2",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "bootstrap": "^4.3.1",
+    "bootstrap-select": "^1.13.12",
+    "core-js": "^3.3.5"
+  }
+}

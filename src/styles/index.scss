@@ -1,0 +1,121 @@
+$primary: #4e66f8;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+$header-height: 74px;
+$navigation-logo-height: 48px;
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-control {
+  &[readonly] {
+    background-color: transparent;
+  }
+}
+
+.ec {
+  padding-top: $header-height;
+
+  &-no-padding {
+    padding-top: 0;
+  }
+
+  &-sign-in {
+    &-wallpaper {
+      background: no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &-header {
+    &-nav {
+      &-logo {
+        &-image {
+          height: $navigation-logo-height;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &-showcase {
+    background: url('/build/images/showcase.jpg') no-repeat center;
+    background-size: cover;
+    &-form-group {
+      &:not(:last-child) {
+        border-right: 1px solid $gray-300;
+      }
+    }
+    &-form-control {
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .ec {
+    &-showcase {
+      &-group {
+        &:not(:last-child) {
+          border: none;
+        }
+      }
+      &-form-control {
+        border-bottom: 1px solid $gray-300 !important;
+      }
+    }
+  }
+}
+// followers section
+.followers {
+  padding-left: 25%;
+  padding-right: 25%;
+  background-color: white;
+
+  .media {
+    img {
+      width: 96px;
+      height: 96px;
+    }
+  }
+}
+//event profile section
+.eventprofile-intro {
+  width: fit-content;
+  padding: 40px;
+}
+
+.eventprofile-row {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  padding-left: 130px;
+}
+
+.eventprofile-row p {
+  color: black;
+}
+
+.rounded-icon {
+  display: inline-block;
+  border: solid 1px black;
+  background-color: white;
+  margin: 5px;
+
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  display: table-cell;
+}
