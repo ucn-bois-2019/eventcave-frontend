@@ -3,21 +3,26 @@ $primary: #4e66f8;
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
 $header-height: 74px;
+$footer-height: 72px;
 $navigation-logo-height: 48px;
+$border-color: $gray-300;
 
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 .form-control {
   &[readonly] {
     background-color: transparent;
   }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+main {
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
 }
 
 .ec {
@@ -50,7 +55,7 @@ body {
     background-size: cover;
     &-form-group {
       &:not(:last-child) {
-        border-right: 1px solid $gray-300;
+        border-right: 1px solid $border-color;
       }
     }
     &-form-control {
@@ -71,7 +76,7 @@ body {
         }
       }
       &-form-control {
-        border-bottom: 1px solid $gray-300 !important;
+        border-bottom: 1px solid $border-color !important;
       }
     }
   }
