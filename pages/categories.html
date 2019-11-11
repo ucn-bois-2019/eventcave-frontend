@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Event cave | The last event catalogue you'll ever need</title>
+    <title>Categories | Event cave</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/build/images/favicon.ico" />
@@ -17,15 +17,27 @@
       rel="stylesheet"
       href="https://unpkg.com/flatpickr@4.6.3/dist/flatpickr.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
     <link rel="stylesheet" href="/build/styles.css" />
   </head>
-  <body class="ec">
+  <body class="ec" id="top">
     <noscript>Please enable javascript to get the best experience.</noscript>
     <header class="ec-header">
       <nav
         class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow-md ec-header-nav"
       >
-        <a class="navbar-brand ec-header-nav-logo" href="#">
+        <a class="navbar-brand ec-header-nav-logo" href="/pages/landing.html">
           <img
             class="img-fluid ec-header-nav-logo-image"
             src="/build/images/logo.png"
@@ -43,13 +55,29 @@
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="#">Browse</a>
+              <a class="nav-link font-weight-bold" href="/pages/search.html"
+                >Search</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link font-weight-bold" href="/pages/categories.html"
+                >Categories</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="#">My profile</a>
+              <a class="nav-link font-weight-bold" href="/pages/profile.html"
+                >My profile</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="#">Sign in</a>
+              <a class="nav-link font-weight-bold" href="/pages/sign-in.html"
+                >Sign in</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="/pages/sign-up.html"
+                >Sign up</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link font-weight-bold" href="#">Sign out</a>
@@ -57,12 +85,12 @@
             <li class="nav-item ml-md-1">
               <a
                 class="d-block d-md-none nav-link text-primary font-weight-bold"
-                href="#"
+                href="/pages/search.html"
                 >Host event</a
               >
               <a
                 class="btn btn-primary d-none d-md-inline-block text-uppercase"
-                href="#"
+                href="/pages/search.html"
                 >Host event</a
               >
             </li>
@@ -70,17 +98,22 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="ec-main">
       <section class="py-5">
         <div class="container">
           <div
             class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mb-4"
           >
-            <h3 class="font-weight-bold">Categories</h3>
+            <h3 class="mb-0 font-weight-bold">
+              Pick from <span class="text-primary">4</span> categories
+            </h3>
+            <a href="/pages/landing.html" class="text-muted">
+              <small>Back to homepage</small></a
+            >
           </div>
           <div class="row">
             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="#" class="card text-white">
+              <a href="/pages/search.html" class="card shadow text-white">
                 <img
                   src="https://images.pexels.com/photos/698928/pexels-photo-698928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                   class="card-img"
@@ -95,7 +128,7 @@
               </a>
             </div>
             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="#" class="card text-white">
+              <a href="/pages/search.html" class="card shadow text-white">
                 <img
                   src="https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                   class="card-img"
@@ -112,7 +145,7 @@
               </a>
             </div>
             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="#" class="card text-white">
+              <a href="/pages/search.html" class="card shadow text-white">
                 <img
                   src="https://images.pexels.com/photos/1078958/pexels-photo-1078958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                   class="card-img"
@@ -131,7 +164,7 @@
               </a>
             </div>
             <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="#" class="card text-white">
+              <a href="/pages/search.html" class="card shadow text-white">
                 <img
                   src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                   class="card-img"
@@ -166,6 +199,8 @@
     <script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/bootstrap-select@1.13.12/dist/js/bootstrap-select.min.js"></script>
     <script src="https://unpkg.com/flatpickr@4.6.3/dist/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="/build/bundle.js" async defer></script>
   </body>
 </html>

@@ -1,35 +1,50 @@
+// Overriding defaults
 $primary: #4e66f8;
+$danger: #e83e8c;
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
 @import '../../node_modules/bootstrap/scss/bootstrap';
-
+// Custom variables
 $header-height: 74px;
 $footer-height: 72px;
 $navigation-logo-height: 48px;
 $border-color: $gray-300;
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.form-control {
-  &[readonly] {
-    background-color: transparent;
+.slick {
+  &-slider {
+    margin-bottom: 0 !important;
+  }
+  &-dots {
+    bottom: 0;
+    li {
+      button {
+        &:before {
+          color: white !important;
+        }
+      }
+    }
   }
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+a.card {
+  color: inherit;
+  height: 100%;
+  text-decoration: none;
 }
-main {
-  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+[data-slider] {
+  display: none;
 }
 
 .ec {
+  font-family: 'Poppins', sans-serif;
   padding-top: $header-height;
 
   &-no-padding {
     padding-top: 0;
+  }
+
+  &-main {
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
   }
 
   &-sign-in {
@@ -59,6 +74,9 @@ main {
       }
     }
     &-form-control {
+      &[readonly] {
+        background-color: transparent;
+      }
       &:focus {
         box-shadow: none;
         outline: 0;
@@ -70,7 +88,7 @@ main {
 @include media-breakpoint-down(lg) {
   .ec {
     &-showcase {
-      &-group {
+      &-form-group {
         &:not(:last-child) {
           border: none;
         }
@@ -80,47 +98,4 @@ main {
       }
     }
   }
-}
-// followers section
-.followers {
-  padding-left: 25%;
-  padding-right: 25%;
-  background-color: white;
-
-  .media {
-    img {
-      width: 96px;
-      height: 96px;
-    }
-  }
-}
-//event profile section
-.eventprofile-intro {
-  width: fit-content;
-  padding: 40px;
-}
-
-.eventprofile-row {
-  padding-top: 70px;
-  padding-bottom: 40px;
-  padding-left: 130px;
-}
-
-.eventprofile-row p {
-  color: black;
-}
-
-.rounded-icon {
-  display: inline-block;
-  border: solid 1px black;
-  background-color: white;
-  margin: 5px;
-
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  display: table-cell;
 }
