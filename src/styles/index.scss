@@ -61,6 +61,16 @@ a {
     }
   }
 
+  &-toast {
+    min-width: 256px;
+    &-wrapper {
+      bottom: 16px;
+      left: 16px;
+      position: fixed;
+      z-index: 2;
+    }
+  }
+
   &-header {
     &-nav {
       &-logo {

@@ -6,6 +6,12 @@ feather.replace();
 $('select').selectpicker({
   style: ''
 });
+$('.toast')
+  .toast({
+    autohide: false
+  })
+  .toast('show');
+
 $('.form-control[type=date]').flatpickr({
   minDate: 'today',
   dateFormat: 'd.m.Y'
