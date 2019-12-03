@@ -4,7 +4,9 @@ import 'regenerator-runtime/runtime';
 
 feather.replace();
 $('select').selectpicker({
-  style: ''
+  style: '',
+  selectedTextFormat: 'count',
+  countSelectedText: count => `${count} selected`
 });
 $('.toast')
   .toast({
@@ -12,7 +14,7 @@ $('.toast')
   })
   .toast('show');
 
-$('.form-control[type=date]').flatpickr({
+$('.form-control[type=date], .form-control[type=datetime]').flatpickr({
   minDate: 'today',
   dateFormat: 'd.m.Y'
 });

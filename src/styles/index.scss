@@ -8,6 +8,7 @@ $header-height: 74px;
 $footer-height: 72px;
 $navigation-logo-height: 48px;
 $border-color: $gray-300;
+$form-control-border: 1px solid #ced4da;
 
 .slick {
   &-slider {
@@ -23,6 +24,9 @@ $border-color: $gray-300;
       }
     }
   }
+}
+.bootstrap-select.form-control {
+  border: $form-control-border;
 }
 
 a {
@@ -58,6 +62,14 @@ a {
     &-wallpaper {
       background: no-repeat center;
       background-size: cover;
+    }
+  }
+
+  &-empty {
+    svg {
+      height: 64px;
+      max-width: 64px;
+      width: 100%;
     }
   }
 

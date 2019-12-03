@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Event cave | The last event catalogue you'll ever need</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/build/images/favicon.ico" />
+    <link rel="icon" href="/build/images/favicon.png" sizes="16x16" />
+    <link rel="icon" href="/build/images/favicon.png" sizes="32x32" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-select@1.13.12/dist/css/bootstrap-select.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flatpickr@4.6.3/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="/build/styles.css" />
+  </head>
+  <body class="ec min-vh-100" id="top">
+    <noscript>Please enable javascript to get the best experience.</noscript>
+    <!-- Messages -->
+    <div class="ec-toast-wrapper">
+      <div class="toast ec-toast">
+          <div class="toast-header">
+            <span class="mr-auto">New message</span>
+            <small>just now</small>
+            <button type="button" class="ml-2 mb-1 close float-right" data-dismiss="toast">
+                <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+              This is toast message.
+          </div>
+      </div>
+  </div>
+    <header class="ec-header">
+      <nav
+        class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow-md ec-header-nav"
+      >
+        <a class="navbar-brand ec-header-nav-logo" href="/pages/landing.html">
+          <img
+            class="img-fluid ec-header-nav-logo-image"
+            src="/build/images/logo.png"
+            alt="event-cave-logo.png"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="/pages/search.html"
+                >Search</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="/pages/categories.html"
+                >Categories</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="/pages/user-profile.html"
+                >My profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="/pages/sign-in.html"
+                >Sign in</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="/pages/sign-up.html"
+                >Sign up</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="#">Sign out</a>
+            </li>
+            <li class="nav-item ml-md-1">
+              <a
+                class="d-block d-md-none nav-link text-primary font-weight-bold"
+                href="/pages/search.html"
+                >Host event</a
+              >
+              <a
+                class="btn btn-primary d-none d-md-inline-block text-uppercase"
+                href="/pages/search.html"
+                >Host event</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="ec-main">
+      <section class="py-5">
+        <div class="container">
+          <!-- Resolved tickets -->
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mb-4"
+          >
+            <h3 class="mb-0 font-weight-bold">Resolved tickets</h3>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center text-muted ec-empty">
+            <i data-feather="meh"></i>
+            <h5 class="font-weight-bold">Awkwardly empty.</h5>
+          </div>
+          <!-- Pending tickets -->
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mb-4"
+          >
+            <h3 class="mb-0 font-weight-bold">Pending tickets</h3>
+          </div>
+          <!-- Tickets -->
+          <div class="list-group">
+            <a
+              href="#ticket1"
+              class="list-group-item list-group-item-action"
+              data-toggle="collapse"
+            >
+              <div class="d-flex justify-content-between">
+                <div>
+                  <small class="text-muted font-weight-bold">Subject:</small>
+                  <div>Buggy mobile experience with the latest version v5.4.1</div>
+                </div>
+                <small class="text-muted">16th of December 2019</small>
+              </div>
+              <div class="collapse" id="ticket1">
+                <div class="mt-2">
+                  <small class="text-muted font-weight-bold">Message:</small>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Facere sit ab commodi libero quis doloribus, quo beatae tempora consectetur ea eum error. 
+                    Consequatur eos accusantium delectus. Assumenda blanditiis nemo dignissimos!
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted font-weight-bold">Response:</small>
+                  <div>
+                    Hi Rachel. I am sorry but we are not planning to add that future as we are very concerned about privacy of our users. 
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-left">
+            © 2019 UCN Bois. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://www.unpkg.com/feather-icons@4.24.1/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-select@1.13.12/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://unpkg.com/flatpickr@4.6.3/dist/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="/build/bundle.js" async defer></script>
+  </body>
+</html>
