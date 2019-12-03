@@ -1,8 +1,11 @@
 // Overriding defaults
 $primary: #4e66f8;
 $danger: #e83e8c;
+
+// Imports
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
 @import '../../node_modules/bootstrap/scss/bootstrap';
+
 // Custom variables
 $header-height: 74px;
 $footer-height: 72px;
@@ -10,6 +13,8 @@ $navigation-logo-height: 48px;
 $border-color: $gray-300;
 $form-control-border: 1px solid #ced4da;
 
+// Revertin bottom margin and pushing navigation 
+// dots "inset" style of carousel library.
 .slick {
   &-slider {
     margin-bottom: 0 !important;
@@ -25,6 +30,21 @@ $form-control-border: 1px solid #ced4da;
     }
   }
 }
+
+// Making carousel hidden by default until carousel library
+// is initialized.
+[data-slider] {
+  display: none;
+}
+
+// Reverting gray background color of flatpickr
+.form-control {
+  &[readonly] {
+    background-color: transparent;
+  }
+}
+
+// Reverting missing border of bootstrap-select
 .bootstrap-select.form-control {
   border: $form-control-border;
 }
@@ -38,33 +58,21 @@ a {
   }
 }
 
+// Making bootstrap cards to strech in height.
 .card {
   height: 100%;
-}
-
-[data-slider] {
-  display: none;
 }
 
 .ec {
   font-family: 'Poppins', sans-serif;
   padding-top: $header-height;
 
+  // Utility: No padding. Usecase: sign in and sign up templates
   &-no-padding {
     padding-top: 0;
   }
 
-  &-main {
-    min-height: calc(100vh - #{$header-height} - #{$footer-height});
-  }
-
-  &-sign-in {
-    &-wallpaper {
-      background: no-repeat center;
-      background-size: cover;
-    }
-  }
-
+  // Utility: Empty
   &-empty {
     svg {
       height: 64px;
@@ -73,6 +81,7 @@ a {
     }
   }
 
+  // Utility: Toast message
   &-toast {
     min-width: 256px;
     &-wrapper {
@@ -83,6 +92,20 @@ a {
     }
   }
 
+  // Template: Sign in
+  &-sign-in {
+    &-wallpaper {
+      background: no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  // Container: Main
+  &-main {
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  }
+
+  // Partial: Header
   &-header {
     &-nav {
       &-logo {
@@ -94,6 +117,7 @@ a {
     }
   }
 
+  // Partial: Showcase
   &-showcase {
     background: url('/build/images/showcase.jpg') no-repeat center;
     background-size: cover;
