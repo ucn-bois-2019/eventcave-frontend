@@ -34,8 +34,7 @@ $('.form-control[type=datetime]').flatpickr({
 // Carousel init
 $('[data-slider]').slick({
   dots: true,
-  infinity: true,
-  slidesToShow: 3,
+  infinite: false,
   responsive: [
     {
       breakpoint: 992,
@@ -49,7 +48,8 @@ $('[data-slider]').slick({
         slidesToShow: 1
       }
     }
-  ]
+  ],
+  slidesToShow: 3
 });
 // Show slider after carousel init
 $('[data-slider]').show();

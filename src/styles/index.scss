@@ -18,6 +18,7 @@ $form-control-border: 1px solid #ced4da;
 .slick {
   &-slider {
     margin-bottom: 0 !important;
+    overflow: hidden;
   }
   &-dots {
     bottom: 0;
