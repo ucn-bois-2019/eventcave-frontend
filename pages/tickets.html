@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Categories | Event cave</title>
+    <title>Event cave | The last event catalogue you'll ever need</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/build/images/favicon.ico" />
@@ -31,8 +31,23 @@
     />
     <link rel="stylesheet" href="/build/styles.css" />
   </head>
-  <body class="ec" id="top">
+  <body class="ec min-vh-100" id="top">
     <noscript>Please enable javascript to get the best experience.</noscript>
+    <!-- Messages -->
+    <div class="ec-toast-wrapper">
+      <div class="toast ec-toast">
+          <div class="toast-header">
+            <span class="mr-auto">New message</span>
+            <small>just now</small>
+            <button type="button" class="ml-2 mb-1 close float-right" data-dismiss="toast">
+                <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+              This is toast message.
+          </div>
+      </div>
+  </div>
     <header class="ec-header">
       <nav
         class="navbar navbar-expand-md navbar-light fixed-top bg-light shadow-md ec-header-nav"
@@ -59,15 +74,13 @@
                 >Search</a
               >
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link font-weight-bold" href="/pages/categories.html"
                 >Categories</a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link font-weight-bold"
-                href="/pages/user-profile.html"
+              <a class="nav-link font-weight-bold" href="/pages/user-profile.html"
                 >My profile</a
               >
             </li>
@@ -103,87 +116,54 @@
     <main class="ec-main">
       <section class="py-5">
         <div class="container">
+          <!-- Resolved tickets -->
           <div
             class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mb-4"
           >
-            <h3 class="mb-0 font-weight-bold">
-              Pick from <span class="text-primary">4</span> categories
-            </h3>
-            <a href="/pages/landing.html" class="text-muted">
-              <small>Back to homepage</small></a
+            <h3 class="mb-0 font-weight-bold">Resolved tickets</h3>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center text-muted ec-empty">
+            <i data-feather="meh"></i>
+            <h5 class="font-weight-bold">Awkwardly empty.</h5>
+          </div>
+          <!-- Pending tickets -->
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mb-4"
+          >
+            <h3 class="mb-0 font-weight-bold">Pending tickets</h3>
+          </div>
+          <!-- Tickets -->
+          <div class="list-group">
+            <a
+              href="#ticket1"
+              class="list-group-item list-group-item-action"
+              data-toggle="collapse"
             >
+              <div class="d-flex justify-content-between">
+                <div>
+                  <small class="text-muted font-weight-bold">Subject:</small>
+                  <div>Buggy mobile experience with the latest version v5.4.1</div>
+                </div>
+                <small class="text-muted">16th of December 2019</small>
+              </div>
+              <div class="collapse" id="ticket1">
+                <div class="mt-2">
+                  <small class="text-muted font-weight-bold">Message:</small>
+                  <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Facere sit ab commodi libero quis doloribus, quo beatae tempora consectetur ea eum error. 
+                    Consequatur eos accusantium delectus. Assumenda blanditiis nemo dignissimos!
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted font-weight-bold">Response:</small>
+                  <div>
+                    Hi Rachel. I am sorry but we are not planning to add that future as we are very concerned about privacy of our users. 
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="/pages/search.html" class="card shadow text-white">
-                <img
-                  src="https://images.pexels.com/photos/698928/pexels-photo-698928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                  class="card-img"
-                  alt="category-img"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-end"
-                >
-                  <h5 class="card-title font-weight-bold">Education</h5>
-                  <p class="card-text">A better future starts here.</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="/pages/search.html" class="card shadow text-white">
-                <img
-                  src="https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                  class="card-img"
-                  alt="category-img"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-end"
-                >
-                  <h5 class="card-title font-weight-bold">Party</h5>
-                  <p class="card-text">
-                    We know where the best party is.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="/pages/search.html" class="card shadow text-white">
-                <img
-                  src="https://images.pexels.com/photos/1078958/pexels-photo-1078958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                  class="card-img"
-                  alt="category-img"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-end"
-                >
-                  <h5 class="card-title font-weight-bold">
-                    Fashion & Shopping
-                  </h5>
-                  <p class="card-text">
-                    Stay classy.
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-              <a href="/pages/search.html" class="card shadow text-white">
-                <img
-                  src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                  class="card-img"
-                  alt="category-img"
-                />
-                <div
-                  class="card-img-overlay d-flex flex-column justify-content-end"
-                >
-                  <h5 class="card-title font-weight-bold">IT World</h5>
-                  <p class="card-text">
-                    It works on my machine.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
     <footer class="bg-dark text-white py-4">

@@ -1,37 +1,98 @@
+// Overriding defaults
 $primary: #4e66f8;
+$danger: #e83e8c;
+
+// Imports
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+// Custom variables
 $header-height: 74px;
 $footer-height: 72px;
 $navigation-logo-height: 48px;
 $border-color: $gray-300;
+$form-control-border: 1px solid #ced4da;
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+// Revertin bottom margin and pushing navigation 
+// dots "inset" style of carousel library.
+.slick {
+  &-slider {
+    margin-bottom: 0 !important;
+  }
+  &-dots {
+    bottom: 0;
+    li {
+      button {
+        &:before {
+          color: white !important;
+        }
+      }
+    }
+  }
 }
 
+// Making carousel hidden by default until carousel library
+// is initialized.
+[data-slider] {
+  display: none;
+}
+
+// Reverting gray background color of flatpickr
 .form-control {
   &[readonly] {
     background-color: transparent;
   }
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+// Reverting missing border of bootstrap-select
+.bootstrap-select.form-control {
+  border: $form-control-border;
 }
-main {
-  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Making bootstrap cards to strech in height.
+.card {
+  height: 100%;
 }
 
 .ec {
+  font-family: 'Poppins', sans-serif;
   padding-top: $header-height;
 
+  // Utility: No padding. Usecase: sign in and sign up templates
   &-no-padding {
     padding-top: 0;
   }
 
+  // Utility: Empty
+  &-empty {
+    svg {
+      height: 64px;
+      max-width: 64px;
+      width: 100%;
+    }
+  }
+
+  // Utility: Toast message
+  &-toast {
+    min-width: 256px;
+    &-wrapper {
+      bottom: 16px;
+      left: 16px;
+      position: fixed;
+      z-index: 2;
+    }
+  }
+
+  // Template: Sign in
   &-sign-in {
     &-wallpaper {
       background: no-repeat center;
@@ -39,6 +100,12 @@ main {
     }
   }
 
+  // Container: Main
+  &-main {
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  }
+
+  // Partial: Header
   &-header {
     &-nav {
       &-logo {
@@ -50,6 +117,7 @@ main {
     }
   }
 
+  // Partial: Showcase
   &-showcase {
     background: url('/build/images/showcase.jpg') no-repeat center;
     background-size: cover;
@@ -59,6 +127,9 @@ main {
       }
     }
     &-form-control {
+      &[readonly] {
+        background-color: transparent;
+      }
       &:focus {
         box-shadow: none;
         outline: 0;
@@ -70,7 +141,7 @@ main {
 @include media-breakpoint-down(lg) {
   .ec {
     &-showcase {
-      &-group {
+      &-form-group {
         &:not(:last-child) {
           border: none;
         }
@@ -80,47 +151,4 @@ main {
       }
     }
   }
-}
-// followers section
-.followers {
-  padding-left: 25%;
-  padding-right: 25%;
-  background-color: white;
-
-  .media {
-    img {
-      width: 96px;
-      height: 96px;
-    }
-  }
-}
-//event profile section
-.eventprofile-intro {
-  width: fit-content;
-  padding: 40px;
-}
-
-.eventprofile-row {
-  padding-top: 70px;
-  padding-bottom: 40px;
-  padding-left: 130px;
-}
-
-.eventprofile-row p {
-  color: black;
-}
-
-.rounded-icon {
-  display: inline-block;
-  border: solid 1px black;
-  background-color: white;
-  margin: 5px;
-
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  display: table-cell;
 }
